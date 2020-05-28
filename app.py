@@ -4,7 +4,7 @@
 from instabot_py import InstaBot
 from random import randrange
 import getpass
-import tkinter as tk
+
 
 
 bot = InstaBot(
