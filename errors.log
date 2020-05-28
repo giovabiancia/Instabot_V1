@@ -1,0 +1,404 @@
+WARNING:fake_useragent:Error occurred during loading data. Trying to use cache server https://fake-useragent.herokuapp.com/browsers/0.1.11
+Traceback (most recent call last):
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\fake_useragent\utils.py", line 64, in get
+    with contextlib.closing(urlopen(
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error timed out>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\fake_useragent\utils.py", line 164, in load
+    browsers_dict[browser_key] = get_browser_versions(
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\fake_useragent\utils.py", line 120, in get_browser_versions
+    html = get(
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\fake_useragent\utils.py", line 84, in get
+    raise FakeUserAgentError('Maximum amount of retries reached')
+fake_useragent.errors.FakeUserAgentError: Maximum amount of retries reached
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\popcomm\instabot.py\app\instabot\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\popcomm\instabot.py\app\instabot\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\popcomm\instabot.py\app\instabot\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\urllib3\response.py", line 362, in _error_catcher
+    yield
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\urllib3\response.py", line 444, in read
+    data = self._fp.read(amt)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\Lib\http\client.py", line 454, in read
+    n = self.readinto(b)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\Lib\http\client.py", line 498, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\Lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\Lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\Lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\requests\models.py", line 750, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\urllib3\response.py", line 496, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\urllib3\response.py", line 461, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\Lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\urllib3\response.py", line 380, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+urllib3.exceptions.ProtocolError: ('Connection broken: ConnectionResetError(10054, "Connessione in corso interrotta forzatamente dall\'host remoto", None, 10054, None)', ConnectionResetError(10054, "Connessione in corso interrotta forzatamente dall'host remoto", None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 696, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\requests\sessions.py", line 686, in send
+    r.content
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\requests\models.py", line 828, in content
+    self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\requests\models.py", line 753, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: ConnectionResetError(10054, "Connessione in corso interrotta forzatamente dall\'host remoto", None, 10054, None)', ConnectionResetError(10054, "Connessione in corso interrotta forzatamente dall'host remoto", None, 10054, None))
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 762, in get_username_by_user_id
+    profile = instaloader.Profile.from_id(self.instaload.context, user_id)
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\structures.py", line 409, in from_id
+    rhx_gis=context.root_rhx_gis)['data']['user']
+  File "C:\Users\utente\AppData\Local\Programs\Python\Python38\lib\site-packages\instaloader\instaloadercontext.py", line 507, in root_rhx_gis
+    self._root_rhx_gis = self.get_json('', {})['rhx_gis']
+KeyError: 'rhx_gis'
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\instabot.py", line 975, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "C:\Users\utente\Desktop\InstabotBplanner_Venv\instabot_py\sql_updates.py", line 120, in insert_username
+    "INSERT INTO usernames (username_id, username, last_followed_time) \
+TypeError: can only concatenate str (not "bool") to str
